@@ -1,67 +1,134 @@
-*{
-     padding: 0;
-    margin :0;
-    
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-   body{
-   background-image: url("../15 - Vector+1.svg");
-    background-size: cover;
-    background-color:#0075ff;
-    background-position:right top;
-    position:absolute;
-   }
+body {
+    background-color: #0075ff;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+}
 
-   .contenedor{
-    position: relative;
+.contenedor {
     width: 100%;
-    display:flex;
-    align-items:center;
-    align-content:center;
-   }
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 40px;
+}
 
-    .textos{
-     margin-left:40px;
-    z-index:1;
-    color:white;   
+.textos {
+    width: 50%;
+    color: white;
+}
+
+.titulo {
+    font-size: 45px;
+    margin-bottom: 30px;
+}
+
+.subtitulo {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+button {
+    width: 120px;
+    height: 45px;
+    border: none;
+    border-radius: 10px;
+    background-color: #00d1ff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: white;
+}
+
+.imagen {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+}
+
+.pantalla {
+    width: 350px;
+    height: 270px;
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.barra {
+    height: 35px;
+    background-color: #003d80;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px;
+}
+
+.barra span {
+    width: 10px;
+    height: 10px;
+    background-color: #00d1ff;
+    border-radius: 50%;
+}
+
+.contenido {
+    padding: 30px;
+    text-align: center;
+}
+
+.contenido h2 {
+    color: #0075ff;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.contenido p {
+    background-color: #e5f2ff;
+    color: #003d80;
+    padding: 8px;
+    margin: 8px;
+    border-radius: 5px;
+}
+
+/* DISEÑO PARA CELULARES */
+
+@media (max-width: 768px) {
+
+    .contenedor {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+        padding: 30px;
     }
 
-    .titulo{
-        font-size:60px;
-        font-weight:bold;
-        font-family:"releway",sans-serif;
-        -webkit-text-stroke: 2px black;
-        padding: 100px 0 50px 0;
+    .textos {
+        width: 100%;
     }
 
-    .subtitulos{
-        font-size:40px;
-        font-weight:500;
-        margin:0 0 50px 0;
+    .titulo {
+        font-size: 30px;
     }
 
-    button{
-        display:inline-block;
-        width:100px;
-        height:50px;
-        border-radius:10px;
-        border-style:none;
-        font-size:20px;
-        background-color:#00d1ff;
+    .subtitulo {
+        font-size: 16px;
     }
 
-    button:hover{
-        background-color: rgb(rgba(81, 218, 106, 0.948));
-        text-decoration:underline;
-     }
-     button a{
-        color:black;
-        text-decoration:none;
-        font-weight:bold;
-     }
+    .imagen {
+        width: 100%;
+    }
 
-     .imagen{
-        position:relative;
-        top:150px;
-        right:50px;
-     }
+    .pantalla {
+        width: 100%;
+        max-width: 350px;
+    }
+}
